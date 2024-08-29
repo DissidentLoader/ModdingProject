@@ -1,0 +1,5 @@
+#include "ScePadTriggerEffectMultiplePositionFeedbackParam.h"
+
+FScePadTriggerEffectMultiplePositionFeedbackParam::FScePadTriggerEffectMultiplePositionFeedbackParam() {
+}
+

@@ -1,0 +1,13 @@
+#include "SteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages.h"
+
+USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages::USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages() {
+}
+
+USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages* USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages::RequestGlobalAchievementPercentagesAsync(UObject* WorldContextObject, float Timeout) {
+    return NULL;
+}
+
+void USteamCoreProUserStatsAsyncActionRequestGlobalAchievementPercentages::HandleCallback(const FGlobalAchievementPercentagesReady& Data, bool bWasSuccessful) {
+}
+
+
