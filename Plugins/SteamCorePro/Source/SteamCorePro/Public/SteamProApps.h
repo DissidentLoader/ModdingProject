@@ -1,8 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ESteamBetaBranchFlags.h"
 #include "OnDLCInstalledDelegate.h"
 #include "OnFileDetailsResultDelegate.h"
 #include "OnFileDetailsResultDelegateDelegate.h"
+#include "OnNewUrlLaunchParametersDelegateDelegate.h"
+#include "OnTimedTrialStatusDelegateDelegate.h"
 #include "SteamCoreInterface.h"
 #include "SteamID.h"
 #include "SteamProApps.generated.h"
@@ -19,10 +22,22 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnFileDetailsResultDelegate FileDetailsResultDelegate;
     
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FOnNewUrlLaunchParametersDelegate NewUrlLaunchParametersDelegate;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FOnTimedTrialStatusDelegate TimedTrialStatusDelegate;
+    
     USteamProApps();
 
     UFUNCTION(BlueprintCallable)
     static void UninstallDLC(int32 AppID);
+    
+    UFUNCTION(BlueprintCallable)
+    static bool SetDlcContext(int32 AppID);
+    
+    UFUNCTION(BlueprintCallable)
+    static bool SetActiveBeta(const FString& BetaName);
     
     UFUNCTION(BlueprintCallable)
     static bool MarkContentCorrupt(bool bMissingFilesOnly);
@@ -32,6 +47,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static USteamProApps* GetSteamApps();
+    
+    UFUNCTION(BlueprintCallable)
+    static int32 GetNumBetas(int32& Available, int32& Private);
     
     UFUNCTION(BlueprintCallable)
     static FString GetLaunchQueryParam(const FString& Key);
@@ -59,6 +77,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     static bool GetCurrentBetaName(FString& Name);
+    
+    UFUNCTION(BlueprintCallable)
+    static bool GetBetaInfo(int32 BetaIndex, TArray<ESteamBetaBranchFlags>& Flags, int32& BuildId, FString& BetaName, FString& Description);
     
     UFUNCTION(BlueprintCallable)
     static FString GetAvailableGameLanguages();

@@ -1,7 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FindSessionsCallbackProxy.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=OnlineSubsystemUtils -ObjectName=BlueprintSessionResult -FallbackName=BlueprintSessionResult
+#include "FindSessionsCallbackProxy.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SteamCoreShared -ObjectName=SteamSessionSetting -FallbackName=SteamSessionSetting
 #include "SteamSessionSetting.h"
 #include "SteamSessionResult.generated.h"
 

@@ -6,6 +6,6 @@ USTRUCT(BlueprintType)
 struct FSteamSessionSetting {
     GENERATED_BODY()
 public:
-    STEAMCOREPRO_API FSteamSessionSetting();
+    STEAMCORESHARED_API FSteamSessionSetting();
 };
 

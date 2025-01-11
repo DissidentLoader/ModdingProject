@@ -126,6 +126,9 @@ public:
     static bool SetReturnAdditionalPreviews(FUGCQueryHandle Handle, bool bReturnAdditionalPreviews);
     
     UFUNCTION(BlueprintCallable)
+    static bool SetRequiredGameVersions(FUGCUpdateHandle Handle, const FString& GameBranchMin, const FString& GameBranchMax);
+    
+    UFUNCTION(BlueprintCallable)
     static bool SetRankedByTrendDays(FUGCQueryHandle Handle, int32 Days);
     
     UFUNCTION(BlueprintCallable)
@@ -168,6 +171,9 @@ public:
     static bool SetAllowCachedResponse(FUGCQueryHandle Handle, int32 MaxAgeSeconds);
     
     UFUNCTION(BlueprintCallable)
+    static bool SetAdminQuery(FUGCUpdateHandle Handle, bool bAdminQuery);
+    
+    UFUNCTION(BlueprintCallable)
     void SendQueryUGCRequest(const FOnSendQueryUGCRequest& Callback, FUGCQueryHandle Handle);
     
     UFUNCTION(BlueprintCallable)
@@ -199,6 +205,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     static int32 GetUserContentDescriptorPreferences(TArray<ESteamUGCContentDescriptorID> Descriptors, int32 MaxEntries);
+    
+    UFUNCTION(BlueprintCallable)
+    static bool GetSupportedGameVersionData(FUGCQueryHandle Handle, int32 Index, int32 VersionIndex, FString& GameBranchMin, FString& GameBranchMax, int32 GameBranchSize);
     
     UFUNCTION(BlueprintCallable)
     static int32 GetSubscribedItems(TArray<FPublishedFileID>& PublishedFileIDs, int32 MaxEntries);
@@ -241,6 +250,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     static bool GetQueryUGCAdditionalPreview(FUGCQueryHandle Handle, int32 Index, int32 PreviewIndex, FString& URLOrVideoID, FString& OriginalFileName, ESteamItemPreviewType& PreviewType);
+    
+    UFUNCTION(BlueprintCallable)
+    static int32 GetNumSupportedGameVersions(FUGCQueryHandle Handle, int32 Index);
     
     UFUNCTION(BlueprintCallable)
     static int32 GetNumSubscribedItems();

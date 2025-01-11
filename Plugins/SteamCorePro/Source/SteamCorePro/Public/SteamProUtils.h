@@ -6,6 +6,7 @@
 #include "ESteamGamepadTextInputLineMode.h"
 #include "ESteamGamepadTextInputMode.h"
 #include "ESteamNotificationPosition.h"
+#include "ESteamTextFilteringContext.h"
 #include "ESteamUniverse.h"
 #include "OnAppResumingFromSuspendDelegate.h"
 #include "OnCheckFileSignatureDelegate.h"
@@ -15,6 +16,7 @@
 #include "OnLowBatteryPowerDelegate.h"
 #include "OnSteamShutdownDelegate.h"
 #include "SteamCoreInterface.h"
+#include "SteamID.h"
 #include "SteamProUtils.generated.h"
 
 class USteamProUtils;
@@ -135,6 +137,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     static int32 GetAppID();
+    
+    UFUNCTION(BlueprintCallable)
+    static int32 FilterText(ESteamTextFilteringContext Context, FSteamID SourceSteamID, const FString& InputMessage, FString& OutFilteredText);
     
     UFUNCTION(BlueprintCallable)
     static bool DismissGamepadTextInput();

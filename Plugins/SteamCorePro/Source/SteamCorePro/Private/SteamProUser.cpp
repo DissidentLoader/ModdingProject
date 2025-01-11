@@ -31,6 +31,10 @@ USteamProUser* USteamProUser::GetSteamUser() {
     return NULL;
 }
 
+FString USteamProUser::GetSteamIDAsString() {
+    return TEXT("");
+}
+
 FSteamID USteamProUser::GetSteamID_Pure() {
     return FSteamID{};
 }

@@ -1,9 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Net/OnlineBlueprintCallProxyBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EmptyOnlineDelegate__DelegateSignature -FallbackName=EmptyOnlineDelegateDelegate
+#include "Net/OnlineBlueprintCallProxyBase.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SteamCoreShared -ObjectName=SteamSessionSetting -FallbackName=SteamSessionSetting
+#include "SteamSessionSetting.h"
 #include "SteamCoreProAsyncAction.h"
-#include "SteamSessionSearchSetting.h"
 #include "SteamCoreProUpdateSession.generated.h"
 
 class UObject;
@@ -19,7 +20,7 @@ public:
     USteamCoreProUpdateSession();
 
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
-    static USteamCoreProUpdateSession* UpdateSteamCoreProSession(UObject* WorldContextObject, TMap<FString, FSteamSessionSearchSetting> Settings, const FString& SessionName, int32 MaxPlayers);
+    static USteamCoreProUpdateSession* UpdateSteamCoreProSession(UObject* WorldContextObject, TMap<FString, FSteamSessionSetting> Settings, const FString& SessionName, int32 MaxPlayers, bool bAllowJoinInProgress);
     
     UFUNCTION(BlueprintCallable)
     void OnCompleted(FName SessionName, bool bWasSuccessful);

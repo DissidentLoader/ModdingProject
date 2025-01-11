@@ -79,6 +79,10 @@ bool USteamProUGC::SetReturnAdditionalPreviews(FUGCQueryHandle Handle, bool bRet
     return false;
 }
 
+bool USteamProUGC::SetRequiredGameVersions(FUGCUpdateHandle Handle, const FString& GameBranchMin, const FString& GameBranchMax) {
+    return false;
+}
+
 bool USteamProUGC::SetRankedByTrendDays(FUGCQueryHandle Handle, int32 Days) {
     return false;
 }
@@ -135,6 +139,10 @@ bool USteamProUGC::SetAllowCachedResponse(FUGCQueryHandle Handle, int32 MaxAgeSe
     return false;
 }
 
+bool USteamProUGC::SetAdminQuery(FUGCUpdateHandle Handle, bool bAdminQuery) {
+    return false;
+}
+
 void USteamProUGC::SendQueryUGCRequest(const FOnSendQueryUGCRequest& Callback, FUGCQueryHandle Handle) {
 }
 
@@ -171,6 +179,10 @@ void USteamProUGC::GetUserItemVote(const FOnGetUserItemVote& Callback, FPublishe
 
 int32 USteamProUGC::GetUserContentDescriptorPreferences(TArray<ESteamUGCContentDescriptorID> Descriptors, int32 MaxEntries) {
     return 0;
+}
+
+bool USteamProUGC::GetSupportedGameVersionData(FUGCQueryHandle Handle, int32 Index, int32 VersionIndex, FString& GameBranchMin, FString& GameBranchMax, int32 GameBranchSize) {
+    return false;
 }
 
 int32 USteamProUGC::GetSubscribedItems(TArray<FPublishedFileID>& PublishedFileIDs, int32 MaxEntries) {
@@ -227,6 +239,10 @@ bool USteamProUGC::GetQueryUGCChildren(FUGCQueryHandle Handle, int32 Index, TArr
 
 bool USteamProUGC::GetQueryUGCAdditionalPreview(FUGCQueryHandle Handle, int32 Index, int32 PreviewIndex, FString& URLOrVideoID, FString& OriginalFileName, ESteamItemPreviewType& PreviewType) {
     return false;
+}
+
+int32 USteamProUGC::GetNumSupportedGameVersions(FUGCQueryHandle Handle, int32 Index) {
+    return 0;
 }
 
 int32 USteamProUGC::GetNumSubscribedItems() {

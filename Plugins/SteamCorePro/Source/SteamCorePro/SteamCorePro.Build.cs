@@ -11,10 +11,14 @@ public class SteamCorePro : ModuleRules {
             "CoreUObject",
             "DeveloperSettings",
             "Engine",
-            "OnlineSubsystemUtils",
             "OnlineSubsystem",
+            "OnlineSubsystemUtils",
             "SteamCoreShared",
-            "AudioExtensions"
+            "AudioMixer",
+            "SignalProcessing",
+            "AudioExtensions",
         });
+
+        DynamicallyLoadedModuleNames.Add("OnlineSubsystemSteam");
     }
 }

@@ -6,6 +6,14 @@ USteamProApps::USteamProApps() {
 void USteamProApps::UninstallDLC(int32 AppID) {
 }
 
+bool USteamProApps::SetDlcContext(int32 AppID) {
+    return false;
+}
+
+bool USteamProApps::SetActiveBeta(const FString& BetaName) {
+    return false;
+}
+
 bool USteamProApps::MarkContentCorrupt(bool bMissingFilesOnly) {
     return false;
 }
@@ -15,6 +23,10 @@ void USteamProApps::InstallDLC(int32 AppID) {
 
 USteamProApps* USteamProApps::GetSteamApps() {
     return NULL;
+}
+
+int32 USteamProApps::GetNumBetas(int32& Available, int32& Private) {
+    return 0;
 }
 
 FString USteamProApps::GetLaunchQueryParam(const FString& Key) {
@@ -49,6 +61,10 @@ FString USteamProApps::GetCurrentGameLanguage() {
 }
 
 bool USteamProApps::GetCurrentBetaName(FString& Name) {
+    return false;
+}
+
+bool USteamProApps::GetBetaInfo(int32 BetaIndex, TArray<ESteamBetaBranchFlags>& Flags, int32& BuildId, FString& BetaName, FString& Description) {
     return false;
 }
 

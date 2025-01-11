@@ -35,6 +35,10 @@
 		{
 			"Name": "SteamCoreShared",
 			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemSteam",
+			"Enabled": true
 		}
 	]
 }

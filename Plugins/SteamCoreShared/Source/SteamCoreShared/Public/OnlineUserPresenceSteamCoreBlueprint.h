@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=DateTime -FallbackName=DateTime
+#include "Misc/DateTime.h"
 #include "EOnlineFriendSteamCorePresenceState.h"
 #include "OnlineUserPresenceSteamCoreBlueprint.generated.h"
 

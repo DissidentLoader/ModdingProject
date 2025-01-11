@@ -1,9 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Net/OnlineBlueprintCallProxyBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EmptyOnlineDelegate__DelegateSignature -FallbackName=EmptyOnlineDelegateDelegate
-#include "SteamCoreProAsyncAction.h"
+#include "Net/OnlineBlueprintCallProxyBase.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SteamCoreShared -ObjectName=SteamSessionSetting -FallbackName=SteamSessionSetting
 #include "SteamSessionSetting.h"
+#include "SteamCoreProAsyncAction.h"
 #include "SteamCoreProCreateSession.generated.h"
 
 class UObject;

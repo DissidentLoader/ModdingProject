@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "HandlerComponentFactory.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=PacketHandler -ObjectName=HandlerComponentFactory -FallbackName=HandlerComponentFactory
+#include "HandlerComponentFactory.h"
 #include "SteamCoreAuthComponentModuleInterface.generated.h"
 
 UCLASS(Blueprintable)

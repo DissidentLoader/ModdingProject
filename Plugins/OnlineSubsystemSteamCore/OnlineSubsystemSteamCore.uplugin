@@ -27,6 +27,11 @@
 		{
 			"Name": "OnlineSubsystemUtils",
 			"Enabled": true
+		},
+		{
+			"Name": "SteamCoreShared",
+			"Enabled": true
 		}
+		
 	]
 }

@@ -91,6 +91,9 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static USteamProUser* GetSteamUser();
     
+    UFUNCTION(BlueprintCallable)
+    static FString GetSteamIDAsString();
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FSteamID GetSteamID_Pure();
     

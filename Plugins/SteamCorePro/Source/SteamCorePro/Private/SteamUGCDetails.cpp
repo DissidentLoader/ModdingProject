@@ -18,5 +18,6 @@ FSteamUGCDetails::FSteamUGCDetails() {
     this->VotesDown = 0;
     this->Score = 0.00f;
     this->NumChildren = 0;
+    this->TotalFilesSize = 0;
 }
 

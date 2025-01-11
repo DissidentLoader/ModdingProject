@@ -12,6 +12,7 @@ public class OnlineSubsystemSteamCore : ModuleRules {
             "Engine",
             "OnlineSubsystemUtils",
             "PacketHandler",
+            "SteamCoreShared",
         });
     }
 }

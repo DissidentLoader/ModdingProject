@@ -90,6 +90,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NumChildren;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 TotalFilesSize;
+    
     STEAMCOREPRO_API FSteamUGCDetails();
 };
 

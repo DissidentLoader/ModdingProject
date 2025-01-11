@@ -1,25 +1,19 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "5.2",
+	"EngineAssociation": "{34E7B6C9-4A0C-FB37-7E31-DB8DB3423D6A}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
 		{
 			"Name": "LockdownProtocol",
 			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"Engine"
-			]
+			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
 		{
 			"Name": "ModelingToolsEditorMode",
-			"Enabled": true,
-			"TargetAllowList": [
-				"Editor"
-			]
+			"Enabled": true
 		}
 	]
 }

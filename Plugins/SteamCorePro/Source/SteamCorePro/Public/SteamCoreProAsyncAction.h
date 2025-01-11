@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintAsyncActionBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintAsyncActionBase -FallbackName=BlueprintAsyncActionBase
+#include "Kismet/BlueprintAsyncActionBase.h"
 #include "SteamCoreProAsyncAction.generated.h"
 
 UCLASS(Blueprintable)

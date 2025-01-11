@@ -118,6 +118,10 @@ int32 USteamProUtils::GetAppID() {
     return 0;
 }
 
+int32 USteamProUtils::FilterText(ESteamTextFilteringContext Context, FSteamID SourceSteamID, const FString& InputMessage, FString& OutFilteredText) {
+    return 0;
+}
+
 bool USteamProUtils::DismissGamepadTextInput() {
     return false;
 }

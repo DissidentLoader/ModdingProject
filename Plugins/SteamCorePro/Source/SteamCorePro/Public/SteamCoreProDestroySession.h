@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Net/OnlineBlueprintCallProxyBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EmptyOnlineDelegate__DelegateSignature -FallbackName=EmptyOnlineDelegateDelegate
+#include "Net/OnlineBlueprintCallProxyBase.h"
 #include "SteamCoreProAsyncAction.h"
 #include "SteamCoreProDestroySession.generated.h"
 

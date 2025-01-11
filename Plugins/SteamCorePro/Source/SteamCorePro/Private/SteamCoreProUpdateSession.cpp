@@ -3,7 +3,7 @@
 USteamCoreProUpdateSession::USteamCoreProUpdateSession() {
 }
 
-USteamCoreProUpdateSession* USteamCoreProUpdateSession::UpdateSteamCoreProSession(UObject* WorldContextObject, TMap<FString, FSteamSessionSearchSetting> Settings, const FString& SessionName, int32 MaxPlayers) {
+USteamCoreProUpdateSession* USteamCoreProUpdateSession::UpdateSteamCoreProSession(UObject* WorldContextObject, TMap<FString, FSteamSessionSetting> Settings, const FString& SessionName, int32 MaxPlayers, bool bAllowJoinInProgress) {
     return NULL;
 }
 

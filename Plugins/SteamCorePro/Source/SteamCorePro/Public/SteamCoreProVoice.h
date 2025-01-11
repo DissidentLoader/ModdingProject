@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Sound/SoundWaveProcedural.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SoundWaveProcedural -FallbackName=SoundWaveProcedural
+#include "Sound/SoundWaveProcedural.h"
 #include "SteamCoreProVoice.generated.h"
 
 class USteamCoreProVoice;

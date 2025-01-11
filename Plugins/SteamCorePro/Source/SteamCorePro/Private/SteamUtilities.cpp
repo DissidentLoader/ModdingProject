@@ -7,6 +7,9 @@ bool USteamUtilities::WriteBytesToFile(bool bOverwriteIfExists, const FString& A
     return false;
 }
 
+void USteamUtilities::UpdateVoiceInputDevice(const FString& DeviceID) {
+}
+
 bool USteamUtilities::UnmuteRemoteTalker(UObject* WorldContextObject, int32 LocalUserNum, APlayerState* PlayerState, bool bIsSystemWide) {
     return false;
 }
@@ -79,6 +82,10 @@ FSteamTicketHandle USteamUtilities::MakeTicketHandle(const FString& Value) {
 
 FSteamSessionSetting USteamUtilities::MakeString(const FString& Value) {
     return FSteamSessionSetting{};
+}
+
+FSteamItemInstanceID USteamUtilities::MakeSteamItemInstanceID(int64 Value) {
+    return FSteamItemInstanceID{};
 }
 
 FSteamID USteamUtilities::MakeSteamID(const FString& Value) {
@@ -205,6 +212,10 @@ bool USteamUtilities::IsGameIDValid(const FSteamGameID GameID) {
     return false;
 }
 
+FString USteamUtilities::GetVoiceInputDevice() {
+    return TEXT("");
+}
+
 ESteamAttributeType USteamUtilities::GetType(FSteamSessionSetting Settings) {
     return ESteamAttributeType::NOT_SET;
 }
@@ -269,6 +280,10 @@ FString USteamUtilities::BreakUGCHandle(FSteamUGCHandle Handle) {
 
 FString USteamUtilities::BreakTicketHandle(FSteamTicketHandle Handle) {
     return TEXT("");
+}
+
+int64 USteamUtilities::BreakSteamItemInstanceID(FSteamItemInstanceID SteamItemInstanceID) {
+    return 0;
 }
 
 FString USteamUtilities::BreakSteamID(FSteamID SteamID) {

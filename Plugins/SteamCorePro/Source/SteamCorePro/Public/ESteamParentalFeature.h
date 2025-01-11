@@ -19,6 +19,7 @@ enum class ESteamParentalFeature : uint8 {
     k_EFeatureTest,
     k_EFeatureSiteLicense,
     k_EFeatureKioskMode_Deprecated,
+    k_EFeatureBlockAlways,
     k_EFeatureMax,
 };
 

@@ -1,10 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "OnlineFriendSteamCoreBlueprint.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=DateTime -FallbackName=DateTime
+#include "Misc/DateTime.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlueprintFunctionLibrary -FallbackName=BlueprintFunctionLibrary
+#include "Kismet/BlueprintFunctionLibrary.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=LatentActionInfo -FallbackName=LatentActionInfo
+#include "Engine/LatentActionManager.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=SteamCoreShared -ObjectName=OnlineFriendSteamCoreBlueprint -FallbackName=OnlineFriendSteamCoreBlueprint
+#include "OnlineFriendSteamCoreBlueprint.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=SteamCoreShared -ObjectName=SteamSessionSetting -FallbackName=SteamSessionSetting
+#include "SteamSessionSetting.h"
 #include "EFriendListType.h"
 #include "ESteamAccountType.h"
 #include "ESteamAttributeType.h"
@@ -23,7 +28,6 @@
 #include "SteamNetworkingIdentity.h"
 #include "SteamServerAddr.h"
 #include "SteamSessionSearchSetting.h"
-#include "SteamSessionSetting.h"
 #include "SteamTicketHandle.h"
 #include "SteamUGCHandle.h"
 #include "SteamUtilities.generated.h"
@@ -41,6 +45,9 @@ public:
 
     UFUNCTION(BlueprintCallable)
     static bool WriteBytesToFile(bool bOverwriteIfExists, const FString& AbsoluteFilePath, const TArray<uint8>& DataBuffer);
+    
+    UFUNCTION(BlueprintCallable)
+    static void UpdateVoiceInputDevice(const FString& DeviceID);
     
     UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static bool UnmuteRemoteTalker(UObject* WorldContextObject, int32 LocalUserNum, APlayerState* PlayerState, bool bIsSystemWide);
@@ -104,6 +111,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FSteamSessionSetting MakeString(const FString& Value);
+    
+    UFUNCTION(BlueprintPure)
+    static FSteamItemInstanceID MakeSteamItemInstanceID(int64 Value);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FSteamID MakeSteamID(const FString& Value);
@@ -204,6 +214,9 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsGameIDValid(const FSteamGameID GameID);
     
+    UFUNCTION(BlueprintCallable)
+    static FString GetVoiceInputDevice();
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static ESteamAttributeType GetType(FSteamSessionSetting Settings);
     
@@ -254,6 +267,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString BreakTicketHandle(FSteamTicketHandle Handle);
+    
+    UFUNCTION(BlueprintPure)
+    static int64 BreakSteamItemInstanceID(FSteamItemInstanceID SteamItemInstanceID);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString BreakSteamID(FSteamID SteamID);
